@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Premium Sneaker Store</title>
+
+<style>
+body{
+  margin:0;
+  font-family: system-ui, sans-serif;
+  background:#f2f2f2;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url('https://images.unsplash.com/featured/?sneakers');
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  text-align:center;
+  padding:140px 20px;
+}
+.hero h1{
+  font-size:48px;
+  margin-bottom:15px;
+}
+.hero p{
+  font-size:20px;
+  max-width:700px;
+  margin:0 auto 30px;
+}
+.hero a{
+  background:#fff;
+  color:#000;
+  padding:15px 30px;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:6px;
+}
+
+/* SECTIONS */
+.section{
+  background:#fff;
+  margin:30px;
+  padding:50px 30px;
+  border-radius:12px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+/* PRODUCT */
+.product{
+  border:1px solid #ddd;
+  padding:20px;
+  border-radius:8px;
+  background:#fafafa;
+  text-align:center;
+}
+.product h4{
+  margin:10px 0;
+}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  text-align:center;
+}
+.feature-box{
+  background:#f9f9f9;
+  padding:25px;
+  border-radius:10px;
+}
+
+/* CTA */
+.cta{
+  background:#000;
+  color:#fff;
+  text-align:center;
+  padding:70px 20px;
+}
+.cta a{
+  background:#fff;
+  color:#000;
+  padding:15px 35px;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Premium Sneaker Store</h1>
+  <p>Your trusted plug for original sneakers, affordable prices, and fast nationwide delivery.</p>
+  <a href="#products">Shop Now</a>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2 id="about_title"></h2>
+  <p id="about_text"></p>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section">
+  <h2>Why Choose Us</h2>
+  <div class="features">
+    <div class="feature-box">100% Original Sneakers</div>
+    <div class="feature-box">Affordable Prices</div>
+    <div class="feature-box">Fast Delivery</div>
+    <div class="feature-box">Trusted Seller</div>
+    <div class="feature-box">Secure Payment</div>
+    <div class="feature-box">Customer Support</div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="products">
+  <h2>Featured Sneakers</h2>
+  <p>Our top-selling sneakers loved by our customers</p>
+  <div id="product_list" class="grid"></div>
+</section>
+
+<!-- TRUST SECTION -->
+<section class="section">
+  <h2>Trusted by Customers</h2>
+  <p>
+    We have served hundreds of customers across different cities with genuine sneakers,
+    quality packaging, and reliable delivery services. Our brand is built on trust, quality,
+    and customer satisfaction.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <h2 id="contact_title"></h2>
+  <p id="contact_phone"></p>
+  <p id="contact_instagram"></p>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Get Your Sneakers?</h2>
+  <p>Order now and enjoy fast delivery and quality service</p>
+  <a href="https://wa.me/2347000000000">Order on WhatsApp</a>
+</section>
+
+<footer>
+  <p>© 2026 Premium Sneaker Store. All rights reserved.</p>
+</footer>
+
+<!-- JS -->
+<script>
+fetch('/content/data.json')
+  .then(res => res.json())
+  .then(data => {
+
+    // About
+    document.getElementById('about_title').textContent = data.about.title;
+    document.getElementById('about_text').textContent = data.about.text;
+
+    // Products
+    const list = document.getElementById('product_list');
+    list.innerHTML = "";
+    data.products.forEach(p => {
+      const div = document.createElement('div');
+      div.className = "product";
+      div.innerHTML = `
+        <h4>${p.name}</h4>
+        <p>${p.price}</p>
+      `;
+      list.appendChild(div);
+    });
+
+    // Contact
+    document.getElementById('contact_title').textContent = data.contact.title;
+    document.getElementById('contact_phone').textContent = "Phone: " + data.contact.phone;
+    document.getElementById('contact_instagram').textContent = "Instagram: " + data.contact.instagram;
+  });
+</script>
+
+</body>
+</html>
