@@ -2,10 +2,14 @@ backend:
   name: git-gateway
   branch: main
 
+# IMPORTANT: Add your site URL
+site_url: https://fawluxcms.netlify.app/  # ← CHANGE THIS TO YOUR ACTUAL URL
+
 media_folder: "content/images"
 public_folder: "/images"
 
 collections:
+  # SITE CONTENT
   - name: "site_content"
     label: "Site Content"
     editor:
@@ -27,11 +31,21 @@ collections:
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string", default: "About Us"}
-              - {label: "Description", name: "text", widget: "text", default: "We sell 100% authentic sneakers with fast delivery."}
+              - {label: "Description", name: "text", widget: "text", default: "We sell 100% authentic sneakers"}
           
-          - label: "Contact Information"
+          - label: "Contact"
             name: "contact"
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string", default: "Contact"}
-              - {label: "Phone Number", name: "phone", widget: "string", default: "+234 800 000 0000"}
+              - {label: "Phone", name: "phone", widget: "string", default: "+234 800 000 0000"}
+  
+  # PRODUCTS (Optional - add later)
+  # - name: "products"
+  #   label: "Products"
+  #   folder: "content/products"
+  #   create: true
+  #   slug: "{{slug}}"
+  #   fields:
+  #     - {label: "Name", name: "name", widget: "string"}
+  #     - {label: "Price", name: "price", widget: "string"}
