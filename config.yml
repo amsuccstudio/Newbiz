@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "content/images"
+public_folder: "/images"
+
+collections:
+  - name: "site_content"
+    label: "Site Content"
+    editor:
+      preview: false
+    files:
+      - file: "content/data.json"
+        label: "Website Content"
+        name: "main"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", default: "Premium Sneaker Store"}
+              - {label: "Subtitle", name: "subtitle", widget: "text", default: "Your trusted plug for original sneakers"}
+          
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", default: "About Us"}
+              - {label: "Description", name: "text", widget: "text", default: "We sell 100% authentic sneakers with fast delivery."}
+          
+          - label: "Contact Information"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", default: "Contact"}
+              - {label: "Phone Number", name: "phone", widget: "string", default: "+234 800 000 0000"}
