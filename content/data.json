@@ -1,1 +1,16 @@
-
+{
+  "about": {
+    "title": "About Our Store",
+    "text": "We sell original sneakers at affordable prices with fast delivery."
+  },
+  "products": [
+    { "name": "Nike Air Force 1", "price": "₦45,000" },
+    { "name": "Adidas Yeezy", "price": "₦85,000" },
+    { "name": "Jordan 1 Retro", "price": "₦95,000" }
+  ],
+  "contact": {
+    "title": "Contact Us",
+    "phone": "07000000000",
+    "instagram": "@sneakerstore"
+  }
+}
