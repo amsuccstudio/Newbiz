@@ -3,102 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Sneaker Store</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: #f5f5f5;
-        }
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            border-radius: 15px;
-            margin-bottom: 30px;
-        }
-        .section {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        h1 { font-size: 2.5rem; margin: 0 0 10px 0; }
-        h2 { color: #333; margin-top: 0; }
-        .test-mode {
-            background: #e6f7ff;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #1890ff;
-            margin-top: 30px;
-        }
-    </style>
+    <title>NEXORA CREATIVITY | Social Media Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- HERO SECTION -->
-    <div class="hero">
-        <h1 id="hero_title">Premium Sneaker Store</h1>
-        <p id="hero_subtitle">Your trusted plug for original sneakers</p>
-    </div>
-    
-    <!-- ABOUT SECTION -->
-    <div class="section">
-        <h2 id="about_title">About Us</h2>
-        <p id="about_text">We sell 100% authentic sneakers with fast delivery.</p>
-    </div>
-    
-    <!-- CONTACT SECTION -->
-    <div class="section">
-        <h2 id="contact_title">Contact</h2>
-        <p id="contact_phone">Phone: +234 800 000 0000</p>
-    </div>
-    
-    <!-- TEST INDICATOR -->
-    <div class="test-mode" id="test_indicator">
-        <strong>🔄 Loading dynamic content...</strong>
-        <p>If this message stays, content/data.json is not loaded yet.</p>
-    </div>
-    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">NEXORA CREATIVITY</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Crafting Digital Stories That Connect & Convert</h1>
+                <p class="hero-subtitle">I'm a Social Media Manager passionate about helping brands stand out in the digital space. From strategy and content design to engagement and analytics, I create tailored social media experiences that drive growth, build communities, and spark conversations.</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn-primary">View My Work</a>
+                    <a href="#contact" class="btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Social Media Management">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">My Specialties</h2>
+            <p class="section-subtitle">Comprehensive social media solutions tailored to your brand</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Corporate Videos</h3>
+                    <p>Professional corporate content that enhances brand identity and engages stakeholders.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3>YouTube Content</h3>
+                    <p>End-to-end YouTube channel management from strategy to editing and optimization.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Social Media Shorts</h3>
+                    <p>Engaging short-form content for TikTok, Instagram Reels, and YouTube Shorts.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Animation & Motion Graphics</h3>
+                    <p>Dynamic animations and motion graphics that make your content stand out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Recent work that delivered measurable results</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="AI Brands Advertisement">
+                        <div class="portfolio-overlay">
+                            <h3>AI Brands Advertisement</h3>
+                            <p>Complete social media campaign for AI technology brand</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Product Ads">
+                        <div class="portfolio-overlay">
+                            <h3>Product Ads Campaign</h3>
+                            <p>Multi-platform product advertising strategy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="https://i.postimg.cc/X7Wnnpjb/F3097BEF-69B6-42B7-9D63-393CA3B46722.jpg" alt="3D Video Editing">
+                        <div class="portfolio-overlay">
+                            <h3>3D & 2D Video Editing</h3>
+                            <p>Advanced video editing with logo design integration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About My Approach</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I believe in transforming visibility into meaningful impact. Every brand has a unique story, and my mission is to amplify that story across social platforms.</p>
+                    <p>With a blend of strategic thinking and creative execution, I help businesses build authentic connections with their audience, drive engagement, and achieve measurable growth.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>100+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Satisfied Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>Support Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Social Media Strategy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="section-subtitle">Ready to elevate your social media presence?</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>gbadamosiisiaq18@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>08104146885</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Isamole Health Centre, behind white House Lagos Badagry</p>
+                        </div>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <button type="button" id="whatsappButton" class="btn-primary">Send via WhatsApp <i class="fab fa-whatsapp"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>NEXORA CREATIVITY</h2>
+                    <p>Transforming visibility into meaningful impact</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61580001701156" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/nexora_creativity?igsh=dm9tcWloZWdja2F6" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/2348104146885" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/isiaq-gbadamosi-35201b285" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://youtube.com/@gbadamosiisiaq?si=gzZYfoZUb5lmIkAO" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEXORA CREATIVITY. All rights reserved. | 
+                   <a href="https://amsuccstudio.netlify.app" target="_blank" class="developer-link">Developed by AMSUCC Studio</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
     <script>
-        // SIMPLE FETCH - WILL WORK ON NETLIFY
-        fetch('/content/data.json')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('File not found');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('✅ Data loaded:', data);
-                
-                // Update Hero
-                document.getElementById('hero_title').textContent = data.hero.title;
-                document.getElementById('hero_subtitle').textContent = data.hero.subtitle;
-                
-                // Update About
-                document.getElementById('about_title').textContent = data.about.title;
-                document.getElementById('about_text').textContent = data.about.text;
-                
-                // Update Contact
-                document.getElementById('contact_title').textContent = data.contact.title;
-                document.getElementById('contact_phone').textContent = "Phone: " + data.contact.phone;
-                
-                // Hide test indicator
-                document.getElementById('test_indicator').innerHTML = 
-                    '<strong>✅ Dynamic content loaded!</strong><p>CMS is working correctly.</p>';
-                document.getElementById('test_indicator').style.background = '#d4edda';
-                document.getElementById('test_indicator').style.borderLeftColor = '#28a745';
-            })
-            .catch(error => {
-                console.log('⚠️ Using fallback (local mode):', error);
-                document.getElementById('test_indicator').innerHTML = 
-                    '<strong>⚠️ Local Test Mode</strong><p>Static content shown. After deploying to Netlify, content will load from CMS.</p>';
-                document.getElementById('test_indicator').style.background = '#fff3cd';
-                document.getElementById('test_indicator').style.borderLeftColor = '#ffc107';
-            });
+        // WhatsApp Form Redirection
+        document.getElementById('whatsappButton').addEventListener('click', function() {
+            const name = document.querySelector('input[type="text"]').value;
+            const email = document.querySelector('input[type="email"]').value;
+            const subject = document.querySelector('input[placeholder="Subject"]').value;
+            const message = document.querySelector('textarea').value;
+
+            // Validate required fields
+            if (!name || !message) {
+                alert('Please fill in your name and message before sending.');
+                return;
+            }
+
+            // Create WhatsApp message
+            const whatsappMessage = `*New Contact Form Submission*%0A%0A*Name:* ${name}%0A*Email:* ${email || 'Not provided'}%0A*Subject:* ${subject || 'No subject'}%0A%0A*Message:*%0A${message}`;
+
+            // Nigerian phone number format (remove leading 0, add 234)
+            const phoneNumber = '2348104146885'; // From 08104146885
+
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, '_blank');
+        });
+
+        // Also update the original form submission to prevent default behavior
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('whatsappButton').click();
+        });
     </script>
 </body>
-</html>
+</html>  
