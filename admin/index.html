@@ -2,9 +2,21 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>NEXORA CMS</title>
-  <script src="https://unpkg.com/netlify-cms@^2.10.192/dist/netlify-cms.js"></script>
+  <title>CMS Admin</title>
 </head>
 <body>
+  <h1>Loading CMS...</h1>
+
+  <script>
+    var script = document.createElement('script');
+    script.src = "https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js";
+    script.onload = function() {
+      console.log("CMS loaded");
+    };
+    script.onerror = function() {
+      document.body.innerHTML = "<h2>CMS failed to load</h2><p>Network or script error</p>";
+    };
+    document.body.appendChild(script);
+  </script>
 </body>
 </html>
